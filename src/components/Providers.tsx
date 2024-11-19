@@ -1,11 +1,10 @@
-import { useSelector } from "react-redux";
-import { RootState } from "../store/store";
+// import { useSelector } from "react-redux";
+// import { RootState } from "../store/store";
 interface Provider {
   providerFilterHandler: (provider: string) => void;
 }
 const Providers: React.FC<Provider> = ({ providerFilterHandler }) => {
-  const { games } = useSelector((state: RootState) => state.games);
-
+  // const { games } = useSelector((state: RootState) => state.games);
   // const provider = ["all", ...new Set(games.map((data) => data.provider))];
   const provider = [
     "all",

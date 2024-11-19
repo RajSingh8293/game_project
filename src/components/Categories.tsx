@@ -48,17 +48,19 @@ const Categories: React.FC<Filters> = ({
               <IoIosSearch size={30} />
             </button>
           </div>
-          <nav className="category  w-full flex justify-center lg:justify-end md:justify-end items-center gap-5 p-3 ">
-            {cotegoryList.map((data) => (
-              <button
-                key={data?.name}
-                onClick={() => categoryFilterHandler(data.name)}
-                className=" uppercase bg-black rounded-lg p-1 px-4 text-white font-semibold text-sm"
-              >
-                {data?.name}
-              </button>
-            ))}
-          </nav>
+          <div>
+            <nav className="category flex justify-center lg:justify-end md:justify-end items-center gap-5 p-3 ">
+              {cotegoryList.map((data) => (
+                <button
+                  key={data?.name}
+                  onClick={() => categoryFilterHandler(data.name)}
+                  className=" uppercase bg-black rounded-lg p-1 px-4 text-white font-semibold text-sm"
+                >
+                  {data?.name}
+                </button>
+              ))}
+            </nav>
+          </div>
         </div>
         <div
           className={`flex gap-3 w-full items-center ${
