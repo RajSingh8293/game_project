@@ -5,7 +5,18 @@ interface Provider {
 }
 const Providers: React.FC<Provider> = ({ providerFilterHandler }) => {
   const { games } = useSelector((state: RootState) => state.games);
-  const provider = ["all", ...new Set(games.map((data) => data.provider))];
+
+  // const provider = ["all", ...new Set(games.map((data) => data.provider))];
+  const provider = [
+    "all",
+    "Nintendo",
+    "CD Projekt Red",
+    "Mojang Studios",
+    "Rockstar Games",
+    "InnerSloth",
+    "Blizzard Entertainment",
+    "Team Cherry",
+  ];
   console.log(provider);
 
   return (
