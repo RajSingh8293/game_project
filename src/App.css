@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+}
+.category {
+  overflow-x: auto;
+}
+.category::-webkit-scrollbar,
+.removeScrollbar::-webkit-scrollbar {
+  display: none;
+  /* width: 0; */
+}
+.footer.active {
+  color: tomato;
+}
+
+/* ********************** Game Card Css Starts *********************** */
+.gameCard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.gameCard .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.gameCard .gameContent {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.gameCard:hover .image {
+  opacity: 0.8;
+}
+
+.gameCard:hover .gameContent {
+  opacity: 1;
+}
+.gameContent h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.gameContent p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.gameContent button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.gameContent button:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #333;
+  border: 1px solid #333;
+  color: white;
+}
+
+/* ********************** Game Card Css  Ends*********************** */
+
+.favoriteBox:nth-child(2) .favoriteBadge {
+  display: block;
+}
+
+/* ********************** Loader Card Css starts*********************** */
+.loader {
+  border: 0.5rem solid #333;
+  border-top: 0.5rem solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ********************** Loader Card Css ends *********************** */
+
+.btn.active {
+  background-color: black;
+}
